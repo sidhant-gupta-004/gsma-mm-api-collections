@@ -1,0 +1,2883 @@
+{
+	"info": {
+		"_postman_id": "a8a23662-b67a-4bd0-b40f-d047aa1c5f75",
+		"name": "gsma-mm-hackathon-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "transactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Date",
+						"value": "2019-07-17T16:34:33.250Z",
+						"type": "text"
+					},
+					{
+						"key": "X-CorrelationID",
+						"value": "{{$guid}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": \"1000.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"transfer\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"mobilemoneyapi",
+						"io"
+					],
+					"path": [
+						"simulator",
+						"v1.0",
+						"mm",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "post-internationalTransfer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-17T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "c120b566-182f-41d3-8a15-f20f23943512",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"inttransfer\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 10 Aug 2019 11:48:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"200.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"inttransfer\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-06-26T19:35:15.594+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"oneTimeCode\": \"string\",\n    \"geoCode\": \"37.423825,-122.082900\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"senderKyc\": null,\n    \"recipientKyc\": null,\n    \"originalTransactionReference\": null,\n    \"servicingIdentity\": null,\n    \"requestingLei\": null,\n    \"receivingLei\": null,\n    \"metadata\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null,\n    \"transactionStatus\": \"completed\",\n    \"creationDate\": \"2019-08-10T11:48:03.822+0000\",\n    \"modificationDate\": \"2019-08-10T11:48:03.822+0000\",\n    \"transactionReference\": \"REF-1565437683822\",\n    \"transactionReceipt\": null,\n    \"internationalTransferInformation\": null\n}"
+				},
+				{
+					"name": "post-billpay",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-02T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "a96bebf9-45c6-4110-a3b3-8e14135e2589",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"billpay\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 17:14:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"200.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"billpay\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-06-26T19:35:15.594+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"oneTimeCode\": \"string\",\n    \"geoCode\": \"37.423825,-122.082900\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"senderKyc\": null,\n    \"recipientKyc\": null,\n    \"originalTransactionReference\": null,\n    \"servicingIdentity\": null,\n    \"requestingLei\": null,\n    \"receivingLei\": null,\n    \"metadata\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null,\n    \"transactionStatus\": \"completed\",\n    \"creationDate\": \"2019-07-02T17:14:20.937+0000\",\n    \"modificationDate\": \"2019-07-02T17:14:20.937+0000\",\n    \"transactionReference\": \"REF-1562087660937\",\n    \"transactionReceipt\": null,\n    \"internationalTransferInformation\": null\n}"
+				},
+				{
+					"name": "post-withdrawal",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-02T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "1e758b8e-5757-4e53-ad3f-7d80488cda36",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"withdrawal\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions/?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 17:44:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"200.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"withdrawal\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-06-26T19:35:15.594+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"oneTimeCode\": \"string\",\n    \"geoCode\": \"37.423825,-122.082900\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"senderKyc\": null,\n    \"recipientKyc\": null,\n    \"originalTransactionReference\": null,\n    \"servicingIdentity\": null,\n    \"requestingLei\": null,\n    \"receivingLei\": null,\n    \"metadata\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null,\n    \"transactionStatus\": \"completed\",\n    \"creationDate\": \"2019-07-02T17:44:51.636+0000\",\n    \"modificationDate\": \"2019-07-02T17:44:51.636+0000\",\n    \"transactionReference\": \"REF-1562089491636\",\n    \"transactionReceipt\": null,\n    \"internationalTransferInformation\": null\n}"
+				},
+				{
+					"name": "post-deposit",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-02T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "15d0f701-a1d5-4c34-bcad-5cd6a123cdec",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"deposit\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions/?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 17:22:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"200.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"deposit\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-06-26T19:35:15.594+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"oneTimeCode\": \"string\",\n    \"geoCode\": \"37.423825,-122.082900\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"senderKyc\": null,\n    \"recipientKyc\": null,\n    \"originalTransactionReference\": null,\n    \"servicingIdentity\": null,\n    \"requestingLei\": null,\n    \"receivingLei\": null,\n    \"metadata\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null,\n    \"transactionStatus\": \"completed\",\n    \"creationDate\": \"2019-07-02T17:22:38.978+0000\",\n    \"modificationDate\": \"2019-07-02T17:22:38.978+0000\",\n    \"transactionReference\": \"REF-1562088158978\",\n    \"transactionReceipt\": null,\n    \"internationalTransferInformation\": null\n}"
+				},
+				{
+					"name": "post-merchantpayment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-02T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "4cbd1cfe-5b15-4871-8a79-fd146d2f68c0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"merchantpayment\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 04 Jul 2019 18:12:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"200.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"merchantpayment\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-06-26T19:35:15.594+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"oneTimeCode\": \"string\",\n    \"geoCode\": \"37.423825,-122.082900\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"senderKyc\": null,\n    \"recipientKyc\": null,\n    \"originalTransactionReference\": null,\n    \"servicingIdentity\": null,\n    \"requestingLei\": null,\n    \"receivingLei\": null,\n    \"metadata\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null,\n    \"transactionStatus\": \"completed\",\n    \"creationDate\": \"2019-07-04T18:12:19.432+0000\",\n    \"modificationDate\": \"2019-07-04T18:12:19.432+0000\",\n    \"transactionReference\": \"REF-1562263939432\",\n    \"transactionReceipt\": null,\n    \"internationalTransferInformation\": null\n}"
+				},
+				{
+					"name": "get-billpay",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-02T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "a96bebf9-45c6-4110-a3b3-8e14135e2589",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"billpay\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions/REF-1562087660937?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions",
+								"REF-1562087660937"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 17:17:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"200.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"billpay\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-06-26T19:35:16.000+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"oneTimeCode\": \"string\",\n    \"geoCode\": \"37.423825,-122.082900\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"senderKyc\": null,\n    \"recipientKyc\": null,\n    \"originalTransactionReference\": null,\n    \"servicingIdentity\": null,\n    \"requestingLei\": null,\n    \"receivingLei\": null,\n    \"metadata\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null,\n    \"transactionStatus\": \"completed\",\n    \"creationDate\": \"2019-07-02T17:14:21.000+0000\",\n    \"modificationDate\": \"2019-07-02T17:14:21.000+0000\",\n    \"transactionReference\": \"REF-1562087660937\",\n    \"transactionReceipt\": null,\n    \"internationalTransferInformation\": null\n}"
+				},
+				{
+					"name": "post-merchantpay",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-02T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "56ab7497-950c-49e3-91f8-5d05a7859e74",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"merchantpay\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions/?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 17:44:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCategory\": \"internal\",\n    \"errorCode\": \"genericError\",\n    \"errorDescription\": \"Root Cause Unknown\",\n    \"errorDateTime\": \"2019-07-02T17:44:06.555+0000\",\n    \"errorParameters\": []\n}"
+				},
+				{
+					"name": "post-adjustment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-02T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "b3fd3b60-ef09-4b94-afa0-ce1e6640e210",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"adjustment\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 18:24:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"200.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"adjustment\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-06-26T19:35:15.594+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"oneTimeCode\": \"string\",\n    \"geoCode\": \"37.423825,-122.082900\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"senderKyc\": null,\n    \"recipientKyc\": null,\n    \"originalTransactionReference\": null,\n    \"servicingIdentity\": null,\n    \"requestingLei\": null,\n    \"receivingLei\": null,\n    \"metadata\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null,\n    \"transactionStatus\": \"completed\",\n    \"creationDate\": \"2019-07-02T18:24:55.076+0000\",\n    \"modificationDate\": \"2019-07-02T18:24:55.076+0000\",\n    \"transactionReference\": \"REF-1562091895076\",\n    \"transactionReceipt\": null,\n    \"internationalTransferInformation\": null\n}"
+				},
+				{
+					"name": "post-reversal",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-02T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "3f272dc8-2fd7-4bf5-82b0-19cc4916fa40",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"reversal\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 18:25:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"200.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"reversal\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-06-26T19:35:15.594+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"oneTimeCode\": \"string\",\n    \"geoCode\": \"37.423825,-122.082900\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"senderKyc\": null,\n    \"recipientKyc\": null,\n    \"originalTransactionReference\": null,\n    \"servicingIdentity\": null,\n    \"requestingLei\": null,\n    \"receivingLei\": null,\n    \"metadata\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null,\n    \"transactionStatus\": \"completed\",\n    \"creationDate\": \"2019-07-02T18:25:39.570+0000\",\n    \"modificationDate\": \"2019-07-02T18:25:39.570+0000\",\n    \"transactionReference\": \"REF-1562091939570\",\n    \"transactionReceipt\": null,\n    \"internationalTransferInformation\": null\n}"
+				},
+				{
+					"name": "post-disbursement",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-02T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "fdb806ea-c9aa-496d-8ab6-9034a2d4fa15",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"disbursement\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions/?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 17:30:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"200.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"disbursement\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-06-26T19:35:15.594+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"oneTimeCode\": \"string\",\n    \"geoCode\": \"37.423825,-122.082900\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"senderKyc\": null,\n    \"recipientKyc\": null,\n    \"originalTransactionReference\": null,\n    \"servicingIdentity\": null,\n    \"requestingLei\": null,\n    \"receivingLei\": null,\n    \"metadata\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null,\n    \"transactionStatus\": \"completed\",\n    \"creationDate\": \"2019-07-02T17:30:18.583+0000\",\n    \"modificationDate\": \"2019-07-02T17:30:18.583+0000\",\n    \"transactionReference\": \"REF-1562088618583\",\n    \"transactionReceipt\": null,\n    \"internationalTransferInformation\": null\n}"
+				},
+				{
+					"name": "post-transfer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-02T16:34:33.250Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "3fedfd48-fcac-42c0-a18f-ad34a4239306",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"200.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"transfer\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"oneTimeCode\": \"string\",\n  \"geoCode\": \"37.423825,-122.082900\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions/?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 17:20:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"200.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"transfer\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-06-26T19:35:15.594+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"oneTimeCode\": \"string\",\n    \"geoCode\": \"37.423825,-122.082900\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"senderKyc\": null,\n    \"recipientKyc\": null,\n    \"originalTransactionReference\": null,\n    \"servicingIdentity\": null,\n    \"requestingLei\": null,\n    \"receivingLei\": null,\n    \"metadata\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null,\n    \"transactionStatus\": \"completed\",\n    \"creationDate\": \"2019-07-02T17:20:41.394+0000\",\n    \"modificationDate\": \"2019-07-02T17:20:41.394+0000\",\n    \"transactionReference\": \"REF-1562088041394\",\n    \"transactionReceipt\": null,\n    \"internationalTransferInformation\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Q0tGWUJyeFFkRFpBY1NPQmdIZktsdFRVNGJEOEZEc0g6bWhJSTkxUmo0NUc3cEhDYw==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sandbox.mobilemoneyapi.io/v1/oauth/accesstoken",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"mobilemoneyapi",
+						"io"
+					],
+					"path": [
+						"v1",
+						"oauth",
+						"accesstoken"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "auth",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "dThZZlNRTm5Oc0dGQWFxUm0zc0dTaHBPMnl3TFJKZ3M6OTdCalJqWTVXRWVGQW5IdA==",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Date",
+								"value": "2019-06-26T19:35:15.594Z",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "apikey",
+								"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/heartbeat",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"heartbeat"
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/x-www-form-urlencoded",
+									"disabled": true
+								},
+								{
+									"key": "Authorization",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 29 Jun 2019 13:05:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCategory\": \"internal\",\n    \"errorCode\": \"genericError\",\n    \"errorDescription\": \"Root Cause Unknown\",\n    \"errorDateTime\": \"2019-06-29T13:05:10.851+0000\",\n    \"errorParameters\": []\n}"
+				},
+				{
+					"name": "oauth2-try",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Q0tGWUJyeFFkRFpBY1NPQmdIZktsdFRVNGJEOEZEc0g6bWhJSTkxUmo0NUc3cEhDYw==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/v1/oauth/accesstoken",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"v1",
+								"oauth",
+								"accesstoken"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 19:35:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "122"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCode\": \"UN_AUTHORIZED\",\n    \"errorMessage\": \"Invalid Credentials\"\n}"
+				}
+			]
+		},
+		{
+			"name": "reversal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CorrelationID",
+						"value": "{{$guid}}",
+						"type": "text"
+					},
+					{
+						"key": "Date",
+						"value": "2019-06-26T20:33:24.854Z",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\": \"100.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"reversal\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-07-02T17:46:29.780Z\",\n  \"geoCode\": \"string\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ],\n  \"servicingIdentity\": \"string\",\n  \"metadata\": [\n    {\n      \"key\": \"string\",\n      \"value\": \"string\"\n    }\n  ],\n  \"transactionStatus\": \"string\"\n}"
+				},
+				"url": {
+					"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions/REF-1562088041394/reversals?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"mobilemoneyapi",
+						"io"
+					],
+					"path": [
+						"simulator",
+						"v1.0",
+						"mm",
+						"transactions",
+						"REF-1562088041394",
+						"reversals"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "post-reversal",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CorrelationID",
+								"value": "f515ab67-6e4d-4bdd-94a6-3421ef84809e",
+								"type": "text"
+							},
+							{
+								"key": "Date",
+								"value": "2019-06-26T20:33:24.854Z",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"100.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"reversal\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-07-02T17:46:29.780Z\",\n  \"geoCode\": \"string\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ],\n  \"servicingIdentity\": \"string\",\n  \"metadata\": [\n    {\n      \"key\": \"string\",\n      \"value\": \"string\"\n    }\n  ],\n  \"transactionStatus\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions/REF-1562088041394/reversals?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions",
+								"REF-1562088041394",
+								"reversals"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 18:41:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"100.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"reversal\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-07-02T17:46:29.780+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"geoCode\": \"string\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"servicingIdentity\": \"string\",\n    \"metadata\": [\n        {\n            \"key\": \"string\",\n            \"value\": \"string\"\n        }\n    ],\n    \"asynchronous\": false,\n    \"transactionStatus\": \"string\",\n    \"dateCreated\": \"2019-07-02T18:41:15.454+0000\",\n    \"dateModified\": \"2019-07-02T18:41:15.454+0000\",\n    \"transactionReference\": \"REF-1562092875454\",\n    \"originalTransactionReference\": \"REF-1562088041394\"\n}"
+				},
+				{
+					"name": "post-adjustment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CorrelationID",
+								"value": "7305696b-52ea-4efc-89a5-0048be1d6fe7",
+								"type": "text"
+							},
+							{
+								"key": "Date",
+								"value": "2019-06-26T20:33:24.854Z",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"100.00\",\n  \"currency\": \"RWF\",\n  \"type\": \"adjustment\",\n  \"subType\": \"string\",\n  \"descriptionText\": \"string\",\n  \"requestDate\": \"2019-07-02T17:46:29.780Z\",\n  \"geoCode\": \"string\",\n  \"requestingOrganisationTransactionReference\": \"string\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ],\n  \"servicingIdentity\": \"string\",\n  \"metadata\": [\n    {\n      \"key\": \"string\",\n      \"value\": \"string\"\n    }\n  ],\n  \"transactionStatus\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/transactions/REF-1562088041394/reversals?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"transactions",
+								"REF-1562088041394",
+								"reversals"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 18:44:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"amount\": \"100.00\",\n    \"currency\": \"RWF\",\n    \"type\": \"adjustment\",\n    \"subType\": \"string\",\n    \"descriptionText\": \"string\",\n    \"requestDate\": \"2019-07-02T17:46:29.780+0000\",\n    \"requestingOrganisationTransactionReference\": \"string\",\n    \"geoCode\": \"string\",\n    \"debitParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+44012345678\"\n        }\n    ],\n    \"creditParty\": [\n        {\n            \"key\": \"msisdn\",\n            \"value\": \"+449999112\"\n        }\n    ],\n    \"servicingIdentity\": \"string\",\n    \"metadata\": [\n        {\n            \"key\": \"string\",\n            \"value\": \"string\"\n        }\n    ],\n    \"asynchronous\": false,\n    \"transactionStatus\": \"string\",\n    \"dateCreated\": \"2019-07-02T18:44:31.199+0000\",\n    \"dateModified\": \"2019-07-02T18:44:31.199+0000\",\n    \"transactionReference\": \"REF-1562093071199\",\n    \"originalTransactionReference\": \"REF-1562088041394\"\n}"
+				}
+			]
+		},
+		{
+			"name": "accounts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Date",
+						"value": "2019-07-03T00:36:31.829Z",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn/%2B44012345678/status?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"mobilemoneyapi",
+						"io"
+					],
+					"path": [
+						"simulator",
+						"v1.0",
+						"mm",
+						"accounts",
+						"msisdn",
+						"%2B44012345678",
+						"status"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "accountname",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-03T00:36:31.829Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn/%2B44012345678/accountname?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"accounts",
+								"msisdn",
+								"%2B44012345678",
+								"accountname"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 18:50:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": {\n        \"title\": null,\n        \"firstName\": null,\n        \"middleName\": null,\n        \"lastName\": null,\n        \"fullName\": null,\n        \"nativeName\": null\n    },\n    \"status\": \"available\",\n    \"lei\": \"AAAA0012345678901299\"\n}"
+				},
+				{
+					"name": "transactions",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-03T00:36:31.829Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn/%2B44012345678/transactions?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"accounts",
+								"msisdn",
+								"%2B44012345678",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 18:51:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "X-Records-Available-Count",
+							"value": "0"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				},
+				{
+					"name": "status-accountID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-03T00:36:31.829Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn@%2B44012345678/status?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"accounts",
+								"msisdn@%2B44012345678",
+								"status"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 18:47:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"available\",\n    \"subStatus\": null,\n    \"lei\": \"AAAA0012345678901299\"\n}"
+				},
+				{
+					"name": "status",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-03T00:36:31.829Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn/%2B44012345678/status?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"accounts",
+								"msisdn",
+								"%2B44012345678",
+								"status"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 18:45:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"available\",\n    \"subStatus\": null,\n    \"lei\": \"AAAA0012345678901299\"\n}"
+				},
+				{
+					"name": "balance",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-03T00:36:31.829Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn/%2B44012345678/balance?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"accounts",
+								"msisdn",
+								"%2B44012345678",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 18:48:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"currentBalance\": \"0.00\",\n    \"availableBalance\": \"0.00\",\n    \"reservedBalance\": \"0.00\",\n    \"unclearedBalance\": \"0.00\",\n    \"currency\": \"GBP\",\n    \"status\": \"available\"\n}"
+				}
+			]
+		},
+		{
+			"name": "bills",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Date",
+						"value": "2019-07-03T01:01:01.000Z",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "X-CorrelationID",
+						"value": "a4ea8264-86b0-4c77-aa47-8b96de928fec",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn/%2B44012345678/bills?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"mobilemoneyapi",
+						"io"
+					],
+					"path": [
+						"simulator",
+						"v1.0",
+						"mm",
+						"accounts",
+						"msisdn",
+						"%2B44012345678",
+						"bills"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "bills-list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-03T01:01:01.000Z",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn/%2B44012345678/bills?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"accounts",
+								"msisdn",
+								"%2B44012345678",
+								"bills"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 20:06:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"currency\": \"GBP\",\n        \"amountDue\": \"60.00\",\n        \"dueDate\": \"2016-09-29\",\n        \"billReference\": \"REF-000002\",\n        \"minimumAmountDue\": \"0.00\",\n        \"billDescription\": null,\n        \"metadata\": []\n    }\n]"
+				},
+				{
+					"name": "bills-payment-accountid-method",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-03T01:01:01.000Z",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "a4ea8264-86b0-4c77-aa47-8b96de928fec",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"currency\": \"AED\",\n  \"paidAmount\": \"40.00\",\n  \"customerReference\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn@+44012345678/bills/REF-000002/payments?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"accounts",
+								"msisdn@+44012345678",
+								"bills",
+								"REF-000002",
+								"payments"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 20:12:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"currency\": \"AED\",\n    \"paidAmount\": \"40.00\",\n    \"customerReference\": \"string\",\n    \"supplementaryBillReferenceDetails\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null\n}"
+				},
+				{
+					"name": "bill-payment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-03T01:01:01.000Z",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "caaf91a3-15c7-49bb-8648-d2d0eac499d0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"currency\": \"GBP\",\n  \"paidAmount\": \"40.00\",\n  \"customerReference\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn/%2B44012345678/bills/REF-000002/payments?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"accounts",
+								"msisdn",
+								"%2B44012345678",
+								"bills",
+								"REF-000002",
+								"payments"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 20:04:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"currency\": \"GBP\",\n    \"paidAmount\": \"40.00\",\n    \"customerReference\": \"string\",\n    \"supplementaryBillReferenceDetails\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null\n}"
+				},
+				{
+					"name": "bill-payment-direct",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Date",
+								"value": "2019-07-03T01:01:01.000Z",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "f6a70554-9225-41b3-8446-0ba1ae87a89b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"currency\": \"AED\",\n  \"paidAmount\": \"40.00\",\n  \"customerReference\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/bills/REF-000002/payments?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"bills",
+								"REF-000002",
+								"payments"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 20:10:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"currency\": \"AED\",\n    \"paidAmount\": \"40.00\",\n    \"customerReference\": \"string\",\n    \"supplementaryBillReferenceDetails\": [],\n    \"asynchronous\": false,\n    \"serverCorrelationId\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "debitmandates",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Date",
+						"value": "2019-07-03T00:00:00.123Z",
+						"type": "text"
+					},
+					{
+						"key": "X-CorrelationID",
+						"value": "f6a70554-9225-41b3-8446-0ba1ae87a89b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"currency\": \"AED\",\n  \"amountLimit\": \"100.00\",\n  \"startDate\": \"2019-07-03T00:00:00.123Z\",\n  \"endDate\": \"string\",\n  \"numberOfPayments\": 0,\n  \"frequencyType\": \"weekly\",\n  \"mandateStatus\": \"active\",\n  \"requestDate\": \"2019-07-03T00:00:00.123Z\",\n  \"mandateReference\": \"string\"\n}"
+				},
+				"url": {
+					"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn/+44012345678/debitmandates/?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"mobilemoneyapi",
+						"io"
+					],
+					"path": [
+						"simulator",
+						"v1.0",
+						"mm",
+						"accounts",
+						"msisdn",
+						"+44012345678",
+						"debitmandates",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "debitmandates-create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Date",
+								"value": "2019-07-03T00:00:00.123Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "f6a70554-9225-41b3-8446-0ba1ae87a89b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"currency\": \"AED\",\n  \"amountLimit\": \"100.00\",\n  \"startDate\": \"2019-07-03T00:00:00.123Z\",\n  \"endDate\": \"string\",\n  \"numberOfPayments\": 0,\n  \"frequencyType\": \"weekly\",\n  \"mandateStatus\": \"active\",\n  \"requestDate\": \"2019-07-03T00:00:00.123Z\",\n  \"mandateReference\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/accounts/msisdn/+44012345678/debitmandates/?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"accounts",
+								"msisdn",
+								"+44012345678",
+								"debitmandates",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 20:46:32 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCategory\": \"internal\",\n    \"errorCode\": \"genericError\",\n    \"errorDescription\": \"Root Cause Unknown\",\n    \"errorDateTime\": \"2019-07-02T20:46:31.989+0000\",\n    \"errorParameters\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "batchtransactions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d3ae63f4-89a3-46df-889f-e6235aa2cc7c",
+						"exec": [
+							"pm.environment.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Date",
+						"value": "2019-07-02T00:00:00.123Z",
+						"type": "text"
+					},
+					{
+						"key": "X-CorrelationID",
+						"value": "{{$guid}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"op\": \"replace\",\n\t\t\"path\": \"/batchStatus\",\n\t\t\"value\": \"approved\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/batchtransactions/REF-1566566681992?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"mobilemoneyapi",
+						"io"
+					],
+					"path": [
+						"simulator",
+						"v1.0",
+						"mm",
+						"batchtransactions",
+						"REF-1566566681992"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "batchtransactions-approve-transaction",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Date",
+								"value": "2019-07-02T00:00:00.123Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "429888c9-8963-4b48-b67e-c22cdcf92f49",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"op\": \"replace\",\n    \"path\": \"/batchStatus\",\n    \"value\": \"approved\"\n  }\n]"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/batchtransactions/REF-1562100946373?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"batchtransactions",
+								"REF-1562100946373"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 21:04:17 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "view-status",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Date",
+								"value": "2019-07-02T00:00:00.123Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "14708320-f666-440f-aab0-b647ba3b5219",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"batchTitle\": \"b1\",\n  \"batchDescription\": \"string\",\n  \"processingFlag\": true,\n  \"scheduledStartDate\": \"2019-07-02T20:46:43.029Z\",\n  \"batchStatus\": \"created\",\n  \"transactions\": [\n\t  \t{\n\t\t  \"amount\": \"100.00\",\n\t\t  \"currency\": \"RWF\",\n\t\t  \"type\": \"reversal\",\n\t\t  \"subType\": \"string\",\n\t\t  \"descriptionText\": \"string\",\n\t\t  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n\t\t  \"requestingOrganisationTransactionReference\": \"string\",\n\t\t  \"oneTimeCode\": \"string\",\n\t\t  \"geoCode\": \"37.423825,-122.082900\",\n\t\t  \"debitParty\": [\n\t\t    {\n\t\t      \"key\": \"msisdn\",\n\t\t      \"value\": \"+44012345678\"\n\t\t    }\n\t\t  ],\n\t\t  \"creditParty\": [\n\t\t    {\n\t\t      \"key\": \"msisdn\",\n\t\t      \"value\": \"+449999112\"\n\t\t    }\n\t\t  ]\n\t\t},\n\t\t{\n\t\t  \"amount\": \"200.00\",\n\t\t  \"currency\": \"RWF\",\n\t\t  \"type\": \"reversal\",\n\t\t  \"subType\": \"string\",\n\t\t  \"descriptionText\": \"string\",\n\t\t  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n\t\t  \"requestingOrganisationTransactionReference\": \"string\",\n\t\t  \"oneTimeCode\": \"string\",\n\t\t  \"geoCode\": \"37.423825,-122.082900\",\n\t\t  \"debitParty\": [\n\t\t    {\n\t\t      \"key\": \"msisdn\",\n\t\t      \"value\": \"+44012345678\"\n\t\t    }\n\t\t  ],\n\t\t  \"creditParty\": [\n\t\t    {\n\t\t      \"key\": \"msisdn\",\n\t\t      \"value\": \"+449999112\"\n\t\t    }\n\t\t  ]\n\t\t}\n  \t],\n  \"creationDate\": \"2019-07-02T20:46:43.030Z\"\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/batchtransactions/REF-1562100946373?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"batchtransactions",
+								"REF-1562100946373"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 20:57:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"batchTitle\": \"b1\",\n    \"batchDescription\": \"string\",\n    \"batchStatus\": \"created\",\n    \"processingFlag\": false,\n    \"scheduledStartDate\": \"2019-07-02T20:46:43.000+0000\",\n    \"creationDate\": \"2019-07-02T20:55:46.000+0000\",\n    \"batchId\": \"REF-1562100946373\",\n    \"approvalDate\": \"2019-07-02T20:55:46.000+0000\",\n    \"completionDate\": null,\n    \"rejectionCount\": null,\n    \"parsingSuccessCount\": 2,\n    \"completedCount\": null\n}"
+				},
+				{
+					"name": "batchtransactions-completions",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Date",
+								"value": "2019-07-02T00:00:00.123Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "429888c9-8963-4b48-b67e-c22cdcf92f49",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"op\": \"replace\",\n    \"path\": \"/batchStatus\",\n    \"value\": \"approved\"\n  }\n]"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/batchtransactions/REF-1562100946373/completions?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"batchtransactions",
+								"REF-1562100946373",
+								"completions"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 21:09:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "X-Records-Available-Count",
+							"value": "0"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				},
+				{
+					"name": "batchtransactions-create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Date",
+								"value": "2019-07-02T00:00:00.123Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "14708320-f666-440f-aab0-b647ba3b5219",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"batchTitle\": \"b1\",\n  \"batchDescription\": \"string\",\n  \"processingFlag\": true,\n  \"scheduledStartDate\": \"2019-07-02T20:46:43.029Z\",\n  \"batchStatus\": \"created\",\n  \"transactions\": [\n\t  \t{\n\t\t  \"amount\": \"100.00\",\n\t\t  \"currency\": \"RWF\",\n\t\t  \"type\": \"reversal\",\n\t\t  \"subType\": \"string\",\n\t\t  \"descriptionText\": \"string\",\n\t\t  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n\t\t  \"requestingOrganisationTransactionReference\": \"string\",\n\t\t  \"oneTimeCode\": \"string\",\n\t\t  \"geoCode\": \"37.423825,-122.082900\",\n\t\t  \"debitParty\": [\n\t\t    {\n\t\t      \"key\": \"msisdn\",\n\t\t      \"value\": \"+44012345678\"\n\t\t    }\n\t\t  ],\n\t\t  \"creditParty\": [\n\t\t    {\n\t\t      \"key\": \"msisdn\",\n\t\t      \"value\": \"+449999112\"\n\t\t    }\n\t\t  ]\n\t\t},\n\t\t{\n\t\t  \"amount\": \"200.00\",\n\t\t  \"currency\": \"RWF\",\n\t\t  \"type\": \"reversal\",\n\t\t  \"subType\": \"string\",\n\t\t  \"descriptionText\": \"string\",\n\t\t  \"requestDate\": \"2019-06-26T19:35:15.594Z\",\n\t\t  \"requestingOrganisationTransactionReference\": \"string\",\n\t\t  \"oneTimeCode\": \"string\",\n\t\t  \"geoCode\": \"37.423825,-122.082900\",\n\t\t  \"debitParty\": [\n\t\t    {\n\t\t      \"key\": \"msisdn\",\n\t\t      \"value\": \"+44012345678\"\n\t\t    }\n\t\t  ],\n\t\t  \"creditParty\": [\n\t\t    {\n\t\t      \"key\": \"msisdn\",\n\t\t      \"value\": \"+449999112\"\n\t\t    }\n\t\t  ]\n\t\t}\n  \t],\n  \"creationDate\": \"2019-07-02T20:46:43.030Z\"\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/batchtransactions/?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"batchtransactions",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 20:55:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"serverCorrelationId\": \"3a89b268-62eb-80b9-acaa-1235e2494668\",\n    \"status\": \"completed\",\n    \"pendingReason\": \"Waiting Approval\",\n    \"notificationMethod\": \"polling\",\n    \"objectReference\": \"REF-1562100946373\",\n    \"pollLimit\": 5\n}"
+				}
+			]
+		},
+		{
+			"name": "quotations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Date",
+						"value": "2019-07-03T12:12:12.123Z",
+						"type": "text"
+					},
+					{
+						"key": "X-CorrelationID",
+						"value": "{$guid}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"requestDate\": \"2019-07-03T12:12:12.123Z\",\r\n  \"debitParty\": [\r\n    {\r\n      \"key\": \"msisdn\",\r\n      \"value\": \"+44012345678\"\r\n    }\r\n  ],\r\n  \"creditParty\": [\r\n    {\r\n      \"key\": \"msisdn\",\r\n      \"value\": \"+449999112\"\r\n    }\r\n  ],\r\n  \"senderKyc\": {\r\n    \"nationality\": \"IND\",\r\n    \"dateOfBirth\": \"2019-07-03T12:12:12.123Z\",\r\n    \"contactPhone\": \"+44012345678\",\r\n    \"gender\": \"m\",\r\n    \"idDocument\": [\r\n      {\r\n        \"idType\": \"passport\",\r\n        \"idNumber\": \"1234\",\r\n        \"issuerCountry\": \"IND\"\r\n      }\r\n    ],\r\n    \"subjectName\": {\r\n      \"title\": \"sid\",\r\n      \"firstName\": \"sid\",\r\n      \"lastName\": \"sid\"\r\n    },\r\n    \"birthCountry\": \"IND\"\r\n  },\r\n  \"recipientKyc\": {\r\n    \"subjectName\": {\r\n      \"firstName\": \"sid\",\r\n      \"lastName\": \"sid\"}\r\n  },\r\n  \"requestAmount\": \"100.00\",\r\n  \"requestCurrency\": \"INR\",\r\n  \"type\": \"directtoaccount\",\r\n  \"chosenDeliveryMethod\": \"directtoaccount\"\r\n}"
+				},
+				"url": {
+					"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/quotations?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"mobilemoneyapi",
+						"io"
+					],
+					"path": [
+						"simulator",
+						"v1.0",
+						"mm",
+						"quotations"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "post-quotations",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Date",
+								"value": "2019-07-03T12:12:12.123Z",
+								"type": "text"
+							},
+							{
+								"key": "X-CorrelationID",
+								"value": "c4c9d7db-2d7e-4832-9379-8f126f3a3ff3",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"requestDate\": \"2019-07-03T12:12:12.123Z\",\n  \"debitParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+44012345678\"\n    }\n  ],\n  \"creditParty\": [\n    {\n      \"key\": \"msisdn\",\n      \"value\": \"+449999112\"\n    }\n  ],\n  \"requestAmount\": \"100.00\",\n  \"requestCurrency\": \"AED\"\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.mobilemoneyapi.io/simulator/v1.0/mm/quotations?apikey=u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"mobilemoneyapi",
+								"io"
+							],
+							"path": [
+								"simulator",
+								"v1.0",
+								"mm",
+								"quotations"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "u8YfSQNnNsGFAaqRm3sGShpO2ywLRJgs"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Aug 2019 16:51:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCategory\": \"internal\",\n    \"errorCode\": \"genericError\",\n    \"errorDescription\": \"Root Cause Unknown\",\n    \"errorDateTime\": \"2019-08-20T16:51:16.772+0000\",\n    \"errorParameters\": []\n}"
+				}
+			]
+		}
+	]
+}
